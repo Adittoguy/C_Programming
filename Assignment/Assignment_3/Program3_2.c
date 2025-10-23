@@ -24,7 +24,7 @@ void DisplayFactor(int iNo)
     {
         if((iNo % iCnt)==0)
         {
-            if((iCnt % 2)==0)
+            if((iNo % 2)==0)
             {
                 printf("%d\t",iCnt);
             }
