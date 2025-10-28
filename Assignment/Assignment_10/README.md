@@ -1,8 +1,13 @@
 # Assignment 10
- This floader contains various practice codes like finding area of circle, rectangle and conversion from fahrenheit to celsius, square feet to square meter and Kilometer to meter.
+ This folder contains Warmup codes and their time complexities which are:- 
+ 1. Calculate area of circle by accepting radius from user
+ 2. Calculate area of rectangle by accepting width and height from user
+ 3. Convert kilomerter to meter
+ 4. Convert fahrenheit to celsius
+ 5. Convert Square feet to square meter
  
- To complie these codes commands used were :- 
+ Commands used to execute these codes:- 
  
- gcc Filename.c -o myexe 
+ gcc filename.c -o myexe 
  
  myexe
