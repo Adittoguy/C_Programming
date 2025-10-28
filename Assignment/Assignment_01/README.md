@@ -10,3 +10,13 @@
  
  gcc filename.c -o myexe :- to compile 
  myexe :- to run code.
+
+
+└── Assignment
+    └── Assignment_01
+        ├── Program1_1.c
+        ├── Program1_2.c
+        ├── Program1_3.c
+        ├── Program1_4.c
+        ├── Program1_5.c
+        └── README.md
