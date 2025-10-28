@@ -11,3 +11,12 @@
  gcc filename.c -o myexe 
  
  myexe
+
+└── Assignment
+    └── Assignment_06
+        ├── Program6_1.c
+        ├── Program6_2.c
+        ├── Program6_3.c
+        ├── Program6_4.c
+        ├── Program6_5.c
+        └── README.md
