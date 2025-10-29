@@ -1,4 +1,4 @@
-# Assignment 3
+# Assignment 12
  This folder contains 5 codes in which we have taken number as a input from user and performed different operations like:-
  1. Print all factors of number
  2. Total count of factors of number
@@ -11,3 +11,12 @@
  gcc filename.c -o myexe
  
  myexe
+
+└── Assignment
+    └── Assignment_12
+        ├── Program12_1.c
+        ├── Program12_2.c
+        ├── Program12_3.c
+        ├── Program12_4.c
+        ├── Program12_5.c
+        └── README.md
