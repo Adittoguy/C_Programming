@@ -9,4 +9,14 @@
  To execute these codes commands used were:- 
  
  gcc filename.c -o myexe 
+ 
  myexe
+
+└── Assignment
+    └── Assignment_05
+        ├── Program5_1.c
+        ├── Program5_2.c
+        ├── Program5_3.c
+        ├── Program5_4.c
+        ├── Program5_5.c
+        └── README.md
