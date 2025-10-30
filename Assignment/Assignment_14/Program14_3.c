@@ -13,7 +13,6 @@
 
 int CountTwo(int iNo)
 {
-    int iCnt = 0;
     int iDigit = 0;
     int iCount = 0;
 

@@ -2,8 +2,8 @@
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  Function Name   :   CountFour
-//  Description     :   Used to accept number and Check how many 4's it contains
+//  Function Name   :   CountDiff
+//  Description     :   Used to accept number and Display difference of iEven and iOdd
 //  Input           :   Integer
 //  Output          :   Integer
 //  Author          :   Aditya Bhaskar Sanap
@@ -11,10 +11,12 @@
 //
 ////////////////////////////////////////////////////////////////////////
 
-int CountFour(int iNo)
+int CountEven(int iNo)
 {
     int iDigit = 0;
-    int iCount = 0;
+    int iEven = 0;
+    int iOdd = 0;
+    int iDiff = 0;
 
     if(iNo < 0)
     {
@@ -25,14 +27,19 @@ int CountFour(int iNo)
     {
         iDigit = iNo % 10;
 
-        if(iDigit == 4)
+        if((iDigit % 2)==0)
         {
-            iCount++;
+            iEven += iDigit;
+        }
+        else
+        {
+            iOdd += iDigit;
         }
 
         iNo = iNo / 10;
     }
-    return iCount;
+    iDiff = iEven - iOdd;
+    return iDiff;
 }
 
 // Time complexity :- O(log n)
@@ -51,7 +58,7 @@ int main()
     printf("Enter Number: ");
     scanf("%d", &iValue);
 
-    iRet = CountFour(iValue);
+    iRet = CountEven(iValue);
 
     printf("%d", iRet);
 

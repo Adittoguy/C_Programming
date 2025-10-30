@@ -2,8 +2,8 @@
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  Function Name   :   CountFour
-//  Description     :   Used to accept number and Check how many 4's it contains
+//  Function Name   :   CountRange
+//  Description     :   Used to accept number and Check digits between 3 and 7 are present in it
 //  Input           :   Integer
 //  Output          :   Integer
 //  Author          :   Aditya Bhaskar Sanap
@@ -11,7 +11,7 @@
 //
 ////////////////////////////////////////////////////////////////////////
 
-int CountFour(int iNo)
+int CountRange(int iNo)
 {
     int iDigit = 0;
     int iCount = 0;
@@ -25,7 +25,7 @@ int CountFour(int iNo)
     {
         iDigit = iNo % 10;
 
-        if(iDigit == 4)
+        if(iDigit > 3 && iDigit < 7)
         {
             iCount++;
         }
@@ -51,7 +51,7 @@ int main()
     printf("Enter Number: ");
     scanf("%d", &iValue);
 
-    iRet = CountFour(iValue);
+    iRet = CountRange(iValue);
 
     printf("%d", iRet);
 

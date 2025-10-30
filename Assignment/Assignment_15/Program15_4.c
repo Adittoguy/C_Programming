@@ -2,8 +2,8 @@
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  Function Name   :   CountFour
-//  Description     :   Used to accept number and Check how many 4's it contains
+//  Function Name   :   MultDigits
+//  Description     :   Used to accept number and display the multiplication of those digits
 //  Input           :   Integer
 //  Output          :   Integer
 //  Author          :   Aditya Bhaskar Sanap
@@ -11,29 +11,40 @@
 //
 ////////////////////////////////////////////////////////////////////////
 
-int CountFour(int iNo)
+int MultDigits(int iNo)
 {
     int iDigit = 0;
-    int iCount = 0;
+    int iMulti = 1;
 
     if(iNo < 0)
     {
         iNo = -iNo;
     }
 
-    while(iNo != 0)
+    // while(iNo != 0)
+    // {
+    //     iDigit = iNo % 10;
+    //     if(iDigit == 0)
+    //     {
+    //         iDigit = 1;
+    //     }
+    //     iMulti = iMulti * iDigit;
+
+    //     iNo = iNo / 10;
+    // }
+
+    while (iNo > 0)
     {
         iDigit = iNo % 10;
-
-        if(iDigit == 4)
-        {
-            iCount++;
-        }
-
+        iMulti = iMulti * ((iDigit == 0) ? 1 : iDigit);
         iNo = iNo / 10;
     }
-    return iCount;
+    return iMulti;
 }
+
+// iMulti = iMulti * (iDigit == 0) ? 1 : iDigit;        Wrong
+// iMulti = iMulti * ((iDigit == 0) ? 1 : iDigit);      Correct
+// iMulti *= (iDigit == 0) ? 1 : iDigit;                Correct
 
 // Time complexity :- O(log n)
 
@@ -51,7 +62,7 @@ int main()
     printf("Enter Number: ");
     scanf("%d", &iValue);
 
-    iRet = CountFour(iValue);
+    iRet = MultDigits(iValue);
 
     printf("%d", iRet);
 
