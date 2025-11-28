@@ -1,0 +1,52 @@
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   strlenX
+//  Description     :   used to count number of charcters in string
+//  Input           :   String
+//  Output          :   Integer
+//  Author          :   Aditya Bhaskar Sanap
+//  Date            :   27/11/2025
+//
+////////////////////////////////////////////////////////////////////////
+
+
+int strlenX(char str[])
+{
+    int iCount = 0;
+
+    while(*str != '\0')
+    {
+        iCount++;
+        str++;
+    }
+    return iCount;
+}
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char Arr[50] = {'\0'};
+    int iRet = 0;
+
+    printf("Enter string: \n");
+    scanf("%[^'\n']s", Arr);
+
+    iRet = strlenX(Arr);
+
+    printf("Length of String is : %d\n", iRet);
+
+    return 0;
+}// End of Main

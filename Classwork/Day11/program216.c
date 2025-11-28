@@ -1,0 +1,46 @@
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   Display
+//  Description     :   used to take string from user and prints individual charaters from it
+//  Input           :   String
+//  Output          :   Character
+//  Author          :   Aditya Bhaskar Sanap
+//  Date            :   27/11/2025
+//
+////////////////////////////////////////////////////////////////////////
+
+
+void Display(char str[])        // instead of * we can use []
+{
+    while(*str != '\0')
+    {
+        printf("%c\n", *str);
+        str++;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char Arr[50] = {'\0'};
+
+    printf("Enter string: \n");
+    scanf("%[^'\n']s", Arr);
+
+    Display(Arr);
+
+    return 0;
+}// End of Main

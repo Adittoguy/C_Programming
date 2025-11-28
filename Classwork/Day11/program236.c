@@ -1,0 +1,53 @@
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   Change
+//  Description     :   change all small character to '_'
+//  Input           :   String
+//  Output          :   String
+//  Author          :   Aditya Bhaskar Sanap
+//  Date            :   27/11/2025
+//
+////////////////////////////////////////////////////////////////////////
+
+
+void Change(char str[])
+{
+
+    while(*str != '\0')
+    {
+        if(*str >= 'a' && *str <= 'z')
+        {    
+            *str = '_';
+        }
+        str++;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char Arr[50] = {'\0'};
+    char cValue = '\0';
+
+    printf("Enter string: \n");
+    scanf("%[^'\n']s", Arr);
+
+    Change(Arr);
+
+    printf("Updated string is: %s \n", Arr);
+
+    return 0;
+}// End of Main
