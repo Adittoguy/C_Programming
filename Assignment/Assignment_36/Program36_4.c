@@ -1,0 +1,49 @@
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   DisplayDigit
+//  Description     :   accept string from user and prnt digtis from that string
+//  Input           :   String
+//  Output          :   Integer
+//  Author          :   Aditya Bhaskar Sanap
+//  Date            :   04/12/2025
+//
+////////////////////////////////////////////////////////////////////////
+
+void DisplayDigit(char *str)
+{
+    while(*str != '\0')
+    {
+        if(*str >= '0' && *str <= '9')
+        {
+            printf("%c", *str);
+        }
+        str++;
+    }
+    printf("\n");
+}
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char arr[20];
+
+    printf("Enter string: ");
+    scanf("%[^'\n']s", arr);
+
+    DisplayDigit(arr);
+
+    return 0;
+}

@@ -1,0 +1,53 @@
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   Reverse
+//  Description     :   Used to print string in reverse 
+//  Input           :   String
+//  Output          :   String
+//  Author          :   Aditya Bhaskar Sanap
+//  Date            :   04/11/2025
+//
+////////////////////////////////////////////////////////////////////////
+
+void Reverse(char *str)
+{
+    char *temp = str;
+
+    while(*str != '\0')
+    {
+        str++;
+    }
+
+    while(str >= temp)
+    {
+        printf("%c", *str);
+        str--;
+    }
+    printf("\n");
+}
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char arr[20];
+
+    printf("Enter string: ");
+    scanf("%[^'\n']s", arr);
+
+    Reverse(arr);
+
+    return 0;
+}

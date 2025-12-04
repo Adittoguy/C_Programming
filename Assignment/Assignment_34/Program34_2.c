@@ -1,0 +1,49 @@
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   Display
+//  Description     :   Accept character from user and print charater capital if it's small and vice versa
+//  Input           :   Character
+//  Output          :   Character
+//  Author          :   Aditya Bhaskar Sanap
+//  Date            :   03/12/2025
+//
+////////////////////////////////////////////////////////////////////////
+
+void Display(char ch)
+{
+    if(ch >= 'A' && ch <= 'Z')
+    {
+        ch = ch + 32;
+    }
+    else if(ch >= 'a' && ch <= 'z')
+    {
+        ch = ch - 32;
+    }
+    printf("%c \n", ch);
+}
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char cValue = '\0';
+
+    printf("Enter the charcter: ");
+    scanf("%c", &cValue);
+
+    Display (cValue);
+
+    return 0;
+}

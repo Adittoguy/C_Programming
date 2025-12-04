@@ -1,0 +1,50 @@
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   struprx
+//  Description     :   Used to convert all lowercase characters to uppercase characters
+//  Input           :   String
+//  Output          :   String
+//  Author          :   Aditya Bhaskar Sanap
+//  Date            :   04/12/2025
+//
+////////////////////////////////////////////////////////////////////////
+
+void struprx(char *str)
+{
+    while(*str != '\0')
+    {
+        if(*str >= 'a' && *str <= 'z')
+        {
+            *str = *str - 32;
+        }
+        str++;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char arr[20];
+
+    printf("Enter string: ");
+    scanf("%[^'\n']s", arr);
+
+    struprx(arr);
+
+    printf("Modified string is %s", arr);
+
+    return 0;
+}

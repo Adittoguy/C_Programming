@@ -1,0 +1,50 @@
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   strlwrx
+//  Description     :   Used to convert all uppercase characters to lowercase characters
+//  Input           :   String
+//  Output          :   String
+//  Author          :   Aditya Bhaskar Sanap
+//  Date            :   04/12/2025
+//
+////////////////////////////////////////////////////////////////////////
+
+void strlwrx(char *str)
+{
+    while(*str != '\0')
+    {
+        if(*str >= 'A' && *str <= 'Z')
+        {
+            *str = *str +32;
+        }
+        str++;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char arr[20];
+
+    printf("Enter string: ");
+    scanf("%[^'\n']s", arr);
+
+    strlwrx(arr);
+
+    printf("Modified string is %s", arr);
+
+    return 0;
+}

@@ -1,0 +1,55 @@
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   StrRevX
+//  Description     :   Used to reverse the string
+//  Input           :   String
+//  Output          :   String
+//  Author          :   Aditya Bhaskar Sanap
+//  Date            :   04/12/2025
+//
+////////////////////////////////////////////////////////////////////////
+
+void StrRevX(char *str)
+{
+    char * temp = str;
+
+    while(*str != '\0')
+    {
+        *str++;
+    }
+
+    while(str >= temp)
+    {
+        printf("%c", *str);
+        str--;
+    }
+    printf("\n");
+}
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char arr[20];
+
+    printf("Enter string: ");
+    scanf("%[^'\n']s", arr);
+
+    StrRevX(arr);
+
+    // printf("Modified string is %s", arr);
+
+    return 0;
+}
