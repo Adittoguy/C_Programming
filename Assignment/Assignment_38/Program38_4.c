@@ -8,8 +8,8 @@
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  Function Name   :   strcpyrev
-//  Description     :   Used to reverse string
+//  Function Name   :   strcpysmall
+//  Description     :   Used to convert capital character to small character of string
 //  Input           :   String
 //  Output          :   String
 //  Author          :   Aditya Bhaskar Sanap
@@ -17,22 +17,20 @@
 //
 ////////////////////////////////////////////////////////////////////////
 
-void strcpyrev(char * str, char * dest)
+void strcpysmall(char * str, char * dest)
 {
-    char *end = str;
-
-    while(*end != '\0')
+    while(*str != '\0')
     {
-        *end++;
-    }
-
-    end--;
-
-    while(end >= str)
-    {
-        *dest = *end;
+        if(*str >= 'A' && *str <= 'Z')
+        {
+            *dest = *str + 32;
+        }
+        else
+        {
+            *dest = *str;
+        }
         dest++;
-        end--;
+        str++;
     }
     *dest = '\0';
 }
@@ -45,12 +43,12 @@ void strcpyrev(char * str, char * dest)
 
 int main()
 {
-    char arr [30] = "Marvellous Python";
+    char arr [30] = "Marvellous Python 2";
     char brr [30] = {'\0'};
 
-    strcpyrev(arr , brr);
+    strcpysmall(arr , brr);
 
-    printf("%s \n", brr);
+    printf("%s", brr);
 
     return 0;
 }

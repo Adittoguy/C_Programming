@@ -8,32 +8,27 @@
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  Function Name   :   strcpyrev
-//  Description     :   Used to reverse string
+//  Function Name   :   strcpyX
+//  Description     :   Used to remove white spaces in string
 //  Input           :   String
 //  Output          :   String
 //  Author          :   Aditya Bhaskar Sanap
-//  Date            :   05/12/2025
+//  Date            :   05/12/0/2025
 //
 ////////////////////////////////////////////////////////////////////////
 
-void strcpyrev(char * str, char * dest)
+void strcpyX(char * str, char * dest)
 {
-    char *end = str;
-
-    while(*end != '\0')
+    while(*str != '\0')
     {
-        *end++;
+        if(*str != ' ')
+        {
+            *dest = *str;
+            dest++;
+        }
+        str++;
     }
 
-    end--;
-
-    while(end >= str)
-    {
-        *dest = *end;
-        dest++;
-        end--;
-    }
     *dest = '\0';
 }
 
@@ -45,12 +40,12 @@ void strcpyrev(char * str, char * dest)
 
 int main()
 {
-    char arr [30] = "Marvellous Python";
+    char arr [30] = "Marvel lous Pyth on";
     char brr [30] = {'\0'};
 
-    strcpyrev(arr , brr);
+    strcpyX(arr , brr);
 
-    printf("%s \n", brr);
+    printf("%s", brr);
 
     return 0;
 }
